@@ -197,3 +197,9 @@ nav {
 .article-text button:hover {
   background-color: #006600;
 }
+
+
+footer {
+    height: 200px;
+    background-color: #403b3b;
+}
