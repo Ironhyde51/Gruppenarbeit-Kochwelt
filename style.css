@@ -56,15 +56,17 @@ nav {
   transform: scaleX(1);
   transform-origin: left;
 }
-.highlight-recipe{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    margin: 140px 20px 60px 20px;
-    padding: 40px 20px;
-    border-radius: 12px;
+
+.highlight-recipe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 140px 20px 60px 20px;
+  padding: 40px 20px;
+  border-radius: 12px;
 }
+
 .highlight-recipe img {
   width: 400px;
   border-radius: 12px;
@@ -101,6 +103,7 @@ nav {
 .highlight-text button:hover {
   background-color: #006600;
 }
+
 /* just-for- new */
 .just-for-new {
   background-color: #e6e5e5;
@@ -147,6 +150,8 @@ nav {
   font-weight: 600;
   color: #000000;
 }
+
+/* Wok vs Pfanne */
 .article-section {
   display: flex;
   justify-content: center;
@@ -198,8 +203,329 @@ nav {
   background-color: #006600;
 }
 
+/* footer */
 
 footer {
-    height: 200px;
-    background-color: #403b3b;
+  background-color: #1e1e1e;
+  padding: 30px 20px;
+  color: #ffffff;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-left img {
+  height: 40px;
+}
+
+.footer-brand {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-socials .social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 900;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.footer-socials .social img {
+  height: 20px;
+}
+
+.social.facebook {
+  background-color: #1877f2;
+}
+
+.social.instagram {
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.social.x {
+  background: linear-gradient(to right, #000000, #2e2e2e, #353535);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+
+.footer-socials .social:hover {
+  transform: scale(1.05);
+}
+
+.footer-socials .social .social-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.footer-socials .social .small-text {
+  font-size: 10px;
+  font-weight: 400;
+  margin-bottom: -1px;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  padding: 50px 86px;
+  padding-bottom: 0;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  height: 3px;
+  background: #008000;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Burger nur sichtbar ab 1024px runter */
+@media (max-width: 1024px) {
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  nav.show {
+    max-height: 300px;
+    /* anpassen je nach Links */
+  }
+
+  .burger {
+    display: flex;
+    margin-right: 20px;
+  }
+
+  nav a {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #eee;
+  }
+
+  .burger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(7px);
+  }
+
+  .burger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-7px);
+  }
+}
+
+/*RESPONSIVE*/
+@media (max-width: 1024px) {
+  header {
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  nav.show {
+    max-height: 300px;
+  }
+
+  .burger {
+    display: flex;
+    margin-right: 20px;
+  }
+
+  nav a {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #eee;
+  }
+
+  .highlight-recipe {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    width: auto;
+    padding: 0 10px 10px 10px;
+  }
+
+  .highlight-recipe {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .highlight-recipe img {
+    width: 80%;
+    max-width: 400px;
+  }
+
+  .highlight-text {
+    max-width: 90%;
+  }
+
+  .article-section {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .article-section img {
+    width: 80%;
+    max-width: 400px;
+  }
+
+  .article-text {
+    max-width: 90%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-left {
+    justify-content: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header img {
+    height: 60px;
+    margin: 10px 0;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.2);
+  }
+
+  nav a {
+    margin: 5px 0;
+  }
+
+  .highlight-recipe {
+    margin: 120px 10px 40px 10px;
+    padding: 20px 10px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .recipe-card {
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .article-section {
+    padding: 40px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header img {
+    height: 50px;
+  }
+
+  .highlight-recipe img,
+  .article-section img {
+    width: 100%;
+  }
+
+  .footer-socials .social {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .footer-socials {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 320px) {
+  .navlink {
+    font-size: 14px;
+  }
+
+  .highlight-text h2,
+  .article-text h2 {
+    font-size: 20px;
+  }
+
+  .highlight-text p,
+  .article-text p {
+    font-size: 14px;
+  }
+
+  .highlight-text button,
+  .article-text button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 }

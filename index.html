@@ -2,86 +2,119 @@
 <html lang="de">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kochwelt</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="./img/favicon.ico">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Viga&display=swap"
-    rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kochwelt</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Viga&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-  <header id="header">
-    <img src="./logo.png" alt="Logo der Kochwelt">
-    <nav id="header_menu">
-      <a class="navlink" href="">Start</a>
-      <a class="navlink" href="">Rezept des Tages</a>
-      <a class="navlink" href="">Kontakte</a>
-      <a class="navlink" href="">Impressum</a>
-    </nav>
-  </header>
+    <header id="header">
+        <img src="./logo.png" alt="Logo der Kochwelt">
+        <nav id="header_menu">
+            <a class="navlink" href="">Start</a>
+            <a class="navlink" href="">Rezept des Tages</a>
+            <a class="navlink" href="">Kontakte</a>
+            <a class="navlink" href="">Impressum</a>
+        </nav>
+         <div class="burger" id="burger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+    </header>
 
-  <main id="main">
-    <!-- Rezept des Tages -->
-    <section class="highlight-recipe">
-      <img src="./img/croissant.jpg" alt="Bild des Highlight Rezepts">
-      <div class="highlight-text">
-        <h2>Französische Croissants</h2>
-        <p>
-          Schmackhafte Croissants können auch zu Hause sehr einfach gebacken werden.
-          Mit ca. 30 Minuten Aufwand kannst du ein wundervolles Frühstück zaubern.
-        </p>
-        <button>Rezept öffnen</button>
-      </div>
-    </section>
+    <main id="main">
+        <!-- Rezept des Tages -->
+        <section class="highlight-recipe">
+            <img src="./img/croissant.jpg" alt="Bild des Highlight Rezepts">
+            <div class="highlight-text">
+                <h2>Französische Croissants</h2>
+                <p>
+                    Schmackhafte Croissants können auch zu Hause sehr einfach gebacken werden.
+                    Mit ca. 30 Minuten Aufwand kannst du ein wundervolles Frühstück zaubern.
+                </p>
+                <button>Rezept öffnen</button>
+            </div>
+        </section>
 
-    <!-- Lust auf was Neues -->
-    <section class="just-for-new">
-      <h2>Lust auf was Neues?</h2>
-      <div class="card-container">
-        <a href="#" class="recipe-card">
-          <img src="./img/croissant.jpg" alt="Frische Croissants">
-          <p>Frische Croissants</p>
-        </a>
-        <a href="#" class="recipe-card">
-          <img src="./img/croissant.jpg" alt="Frische Croissants">
-          <p>Frische Croissants</p>
-        </a>
-        <a href="#" class="recipe-card">
-          <img src="./img/croissant.jpg" alt="Frische Croissants">
-          <p>Frische Croissants</p>
-        </a>
-        <a href="#" class="recipe-card">
-          <img src="./img/croissant.jpg" alt="Frische Croissants">
-          <p>Frische Croissants</p>
-        </a>
-      </div>
-    </section>
+        <!-- Lust auf was Neues -->
+        <section class="just-for-new">
+            <h2>Lust auf was Neues?</h2>
+            <div class="card-container">
+                <a href="#" class="recipe-card">
+                    <img src="./img/croissant.jpg" alt="Frische Croissants">
+                    <p>Frische Croissants</p>
+                </a>
+                <a href="#" class="recipe-card">
+                    <img src="./img/croissant.jpg" alt="Frische Croissants">
+                    <p>Frische Croissants</p>
+                </a>
+                <a href="#" class="recipe-card">
+                    <img src="./img/croissant.jpg" alt="Frische Croissants">
+                    <p>Frische Croissants</p>
+                </a>
+                <a href="#" class="recipe-card">
+                    <img src="./img/croissant.jpg" alt="Frische Croissants">
+                    <p>Frische Croissants</p>
+                </a>
+            </div>
+        </section>
 
-    <!-- Pfanne vs. Wok -->
-    <section class="article-section">
-      <div class="article-text">
-        <h2>Pfanne vs. Wok – Was ist besser?</h2>
-        <p>
-          Ob eine Pfanne oder ein Wok „besser“ ist, hängt von den individuellen Kochgewohnheiten und den gewünschten
-          Gerichten ab. Ein Wok ist ideal für schnelles, heißes Anbraten und scharfes Anbraten, während eine Pfanne
-          vielseitiger für verschiedene Kochmethoden ist.
-        </p>
-        <button>Artikel lesen</button>
-      </div>
-      <img src="./img/wok.jpg" alt="Bild eines Woks">
-    </section>
-  </main>
+        <!-- Pfanne vs. Wok -->
+        <section class="article-section">
+            <div class="article-text">
+                <h2>Pfanne vs. Wok – Was ist besser?</h2>
+                <p>
+                    Ob eine Pfanne oder ein Wok „besser“ ist, hängt von den individuellen Kochgewohnheiten und den
+                    gewünschten
+                    Gerichten ab. Ein Wok ist ideal für schnelles, heißes Anbraten und scharfes Anbraten, während eine
+                    Pfanne
+                    vielseitiger für verschiedene Kochmethoden ist.
+                </p>
+                <button>Artikel lesen</button>
+            </div>
+            <img src="./img/wok.jpg" alt="Bild eines Woks">
+        </section>
+    </main>
 
-  <footer id="footer">
-    <!-- Optional: Footer-Inhalt -->
-  </footer>
+<footer id="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <img src="./img/favicon.ico" alt="Kochwelt Logo">
+      <span class="footer-brand">Kochwelt</span>
+    </div>
+    <div class="footer-socials">
+      <a href="#" class="social facebook" target="_blank">
+        <img src="./img/facebook.svg" alt="Facebook">
+        <div class="social-text">
+          <span class="small-text">follow us on</span>Facebook
+        </div>
+      </a>
+      <a href="#" class="social instagram" target="_blank">
+        <img src="./img/instagram.svg" alt="Instagram">
+        <div class="social-text">
+          <span class="small-text">follow us on</span>Instagram
+        </div>
+      </a>
+      <a href="#" class="social x" target="_blank">
+        <img src="./img/x.svg" alt="X">
+        <div class="social-text">
+          <span class="small-text">follow us on</span>X
+        </div>
+      </a>
+    </div>
+  </div>
+</footer>
 
-  <script src="javascript.js"></script>
+
+    <script src="javascript.js"></script>
 </body>
 
 </html>
