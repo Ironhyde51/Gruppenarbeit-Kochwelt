@@ -530,8 +530,7 @@ footer {
   }
 }
 .mainbody {
-    padding-left: 150px;
-    padding-right: 150px;
+  padding: 150px 150px 100px 150px;
 }
 h1 {
     font-weight: 600;
@@ -679,8 +678,7 @@ small {
 
 @media (max-width: 1020px) {
     .mainbody {
-        padding-left: 100px;
-        padding-right: 100px;
+        padding: 200px 100px 0 100px;
     }
 
     .span_icon {
