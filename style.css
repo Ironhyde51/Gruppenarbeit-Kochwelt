@@ -751,4 +751,18 @@ small {
         padding-top: 20px;
 
     }
+
+}
+.impressum{
+      padding: 150px 150px 0 150px;
+}
+.link_Impressum{
+  text-decoration: none;
+    color: black;
+}
+.link_Impressum:hover {
+  color: #008000;
+}
+.datenschutz{
+  padding: 0 150px 100px 150px;
 }
