@@ -381,6 +381,95 @@ margin-top: 80px;
 .kontaktformular button:hover {
   background-color: #006600;
 }
+
+/* wok vs pfanne- info seite*/
+
+.wok-vs-pan-site {
+  margin: 0px;
+  margin-top: 64px;
+  padding-left: 110px;
+      display: block;
+    unicode-bidi: isolate;
+}
+
+
+h1, h3 {
+  color: #006600;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f5f5f5;
+}
+
+ul {
+  list-style: disc inside;
+}
+
+.vergleichstabelle {
+  margin: 40px auto;
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
+.vergleichstabelle h1 {
+  font-size: 2rem;
+  color: #008000;
+  margin-bottom: 20px;
+}
+
+.vergleichstabelle table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.vergleichstabelle thead {
+  background: #f5f5f5;
+}
+
+.vergleichstabelle th,
+.vergleichstabelle td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.vergleichstabelle tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.vergleichstabelle tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+.vergleichstabelle th {
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+}
+
+.vergleichstabelle td {
+  border-bottom: 1px solid #eee;
+}
+
+.vergleichstabelle td:first-child {
+  font-weight: 500;
+}
+
+
 /* Burger nur sichtbar ab 1024px runter */
 @media (max-width: 1024px) {
   nav {
