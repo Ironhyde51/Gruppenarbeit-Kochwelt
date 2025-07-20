@@ -314,6 +314,73 @@ footer {
   transition: all 0.3s ease;
 }
 
+/* Kontaktformular */
+.kontakt-section {
+  background-color: #e6e5e5;
+  padding: 80px 20px;
+margin-top: 80px;
+  display:flex;
+  justify-content: center;
+}
+
+.kontaktformular {
+  background-color: #d3d3d3;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.kontaktformular h2 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  color: #2c2c2c;
+  text-align: center;
+}
+
+.kontaktformular label {
+  display: block;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin-bottom: 8px;
+  margin-top: 16px;
+}
+
+.kontaktformular input,
+.kontaktformular textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-family: inherit;
+  border: none;
+  border-radius: 6px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: white;
+}
+
+.kontaktformular textarea {
+  resize: vertical;
+}
+
+.kontaktformular button {
+  margin-top: 24px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #008000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.3s ease;
+}
+
+.kontaktformular button:hover {
+  background-color: #006600;
+}
 /* Burger nur sichtbar ab 1024px runter */
 @media (max-width: 1024px) {
   nav {
