@@ -25,7 +25,6 @@ nav {
   align-items: end;
   width: 400px;
   padding-bottom: 10px;
-  z-index: 10
 }
 
 .navlink {
@@ -58,7 +57,6 @@ nav {
   transform-origin: left;
 }
 
-/* highlight */
 .highlight-recipe {
   display: flex;
   align-items: center;
@@ -136,18 +134,15 @@ nav {
   text-decoration: none;
   color: inherit;
   display: block;
-  
 }
 
 .recipe-card:hover {
-  transform: translateY(-6px);
-  background-color: rgb(173, 245, 163);
+  transform: translateY(-5px);
 }
 
 .recipe-card img {
   width: 100%;
   border-radius: 12px;
-  
 }
 
 .recipe-card p {
@@ -313,162 +308,6 @@ footer {
   border-radius: 2px;
   transition: all 0.3s ease;
 }
-
-/* Kontaktformular */
-.kontakt-section {
-  background-color: #e6e5e5;
-  padding: 80px 20px;
-margin-top: 80px;
-  display:flex;
-  justify-content: center;
-}
-
-.kontaktformular {
-  background-color: #d3d3d3;
-  padding: 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 500px;
-}
-
-.kontaktformular h2 {
-  font-size: 28px;
-  margin-bottom: 24px;
-  color: #2c2c2c;
-  text-align: center;
-}
-
-.kontaktformular label {
-  display: block;
-  font-weight: 600;
-  color: #2c2c2c;
-  margin-bottom: 8px;
-  margin-top: 16px;
-}
-
-.kontaktformular input,
-.kontaktformular textarea {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  font-family: inherit;
-  border: none;
-  border-radius: 6px;
-  box-sizing: border-box;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  background-color: white;
-}
-
-.kontaktformular textarea {
-  resize: vertical;
-}
-
-.kontaktformular button {
-  margin-top: 24px;
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  background-color: #008000;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  font-family: inherit;
-  transition: background-color 0.3s ease;
-}
-
-.kontaktformular button:hover {
-  background-color: #006600;
-}
-
-/* wok vs pfanne- info seite*/
-
-.wok-vs-pan-site {
-  margin: 0px;
-  margin-top: 64px;
-  padding-left: 110px;
-      display: block;
-    unicode-bidi: isolate;
-}
-
-
-h1, h3 {
-  color: #006600;
-}
-
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-}
-
-table, th, td {
-  border: 1px solid #ddd;
-}
-
-th, td {
-  padding: 12px;
-  text-align: left;
-}
-
-th {
-  background-color: #f5f5f5;
-}
-
-ul {
-  list-style: disc inside;
-}
-
-.vergleichstabelle {
-  margin: 40px auto;
-  max-width: 1000px;
-  padding: 0 20px;
-}
-
-.vergleichstabelle h1 {
-  font-size: 2rem;
-  color: #008000;
-  margin-bottom: 20px;
-}
-
-.vergleichstabelle table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.vergleichstabelle thead {
-  background: #f5f5f5;
-}
-
-.vergleichstabelle th,
-.vergleichstabelle td {
-  padding: 12px 16px;
-  text-align: left;
-}
-
-.vergleichstabelle tbody tr:nth-child(even) {
-  background: #f9f9f9;
-}
-
-.vergleichstabelle tbody tr:nth-child(odd) {
-  background: #ffffff;
-}
-
-.vergleichstabelle th {
-  font-weight: bold;
-  border-bottom: 2px solid #ddd;
-}
-
-.vergleichstabelle td {
-  border-bottom: 1px solid #eee;
-}
-
-.vergleichstabelle td:first-child {
-  font-weight: 500;
-}
-
 
 /* Burger nur sichtbar ab 1024px runter */
 @media (max-width: 1024px) {
@@ -690,12 +529,13 @@ ul {
     padding: 8px 16px;
   }
 }
-
 .mainbody {
-  padding: 150px 150px 100px 150px;
+    padding-left: 150px;
+    padding-right: 150px;
 }
 h1 {
     font-weight: 600;
+    margin-top: 200px;
 }
 
 h2 {
@@ -819,6 +659,7 @@ tr:nth-child(even) {
 .profile_img {
     border-radius: 100%;
     width: 100px;
+    height: 100px;
 }
 
 .last_section {
@@ -840,7 +681,8 @@ small {
 
 @media (max-width: 1020px) {
     .mainbody {
-        padding: 200px 100px 0 100px;
+        padding-left: 100px;
+        padding-right: 100px;
     }
 
     .span_icon {
@@ -911,18 +753,4 @@ small {
         padding-top: 20px;
 
     }
-
-}
-.impressum{
-      padding: 150px 150px 0 150px;
-}
-.link_Impressum{
-  text-decoration: none;
-    color: black;
-}
-.link_Impressum:hover {
-  color: #008000;
-}
-.datenschutz{
-  padding: 0 150px 100px 150px;
 }

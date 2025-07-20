@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kochwelt-Kontaktfornular</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Viga&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header id="header">
+        <img src="./logo.png" alt="Logo der Kochwelt">
+        <nav id="header_menu">
+            <a class="navlink" href="index.html">Start</a>
+            <a class="navlink" href="">Rezept des Tages</a>
+            <a class="navlink" href="kontaktformular.html">Kontakte</a>
+            <a class="navlink" href="">Impressum</a>
+        </nav>
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    </div>
+    <main>
+        <section class="kontakt-section">
+            <div class="kontaktformular">
+                <h2>Kontaktiere uns</h2>
+                <form action="https://formspree.io/f/manjderq" method="POST">
+                    <label for="name">Dein Name</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Deine E-Mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="massage">Deine Nachricht:</label>
+                    <textarea name="message" id="message" rows="6" required></textarea>
+
+                    <button type="submit">Abschicken</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="./img/favicon.ico" alt="Kochwelt Logo">
+                <span class="footer-brand">Kochwelt</span>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/?locale=de_DE" class="social facebook" target="_blank">
+                    <img src="./img/facebook.svg" alt="Facebook">
+                    <div class="social-text">
+                        <span class="small-text">follow us on</span>Facebook
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/" class="social instagram" target="_blank">
+                    <img src="./img/instagram.svg" alt="Instagram">
+                    <div class="social-text">
+                        <span class="small-text">follow us on</span>Instagram
+                    </div>
+                </a>
+                <a href="https://x.com/?lang=de" class="social x" target="_blank">
+                    <img src="./img/x.svg" alt="X">
+                    <div class="social-text">
+                        <span class="small-text">follow us on</span>X
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>
