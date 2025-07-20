@@ -751,16 +751,9 @@ ul {
 .mainbody {
   padding: 150px 150px 100px 150px;
 }
-h1 {
+.rezept_topic {
     font-weight: 600;
-}
-
-h2 {
-    font-weight: 600;
-}
-
-h3 {
-    font-weight: 600;
+    color:#000000;
 }
 
 .rezept_Img {
@@ -838,10 +831,11 @@ h3 {
     background-color: #f2f2f2;
 }
 
-table {
+.ingredients {
     width: 100%;
     border-collapse: separate;
     border-spacing: 0;
+    border:none;
 }
 
 
@@ -861,6 +855,7 @@ tr:nth-child(even) {
 .td-left {
     width: 20px;
     border-radius: 8px;
+    border: none;
 }
 
 .icons_zubereitung {
