@@ -971,6 +971,12 @@ small {
         padding-top: 20px;
 
     }
+    .impressum{
+      padding: 200px 50px 0 50px !important;
+    }
+     .datenschutz{
+      padding: 0 50px 100px 50px !important;
+    }
 
 }
 .impressum{
@@ -985,4 +991,9 @@ small {
 }
 .datenschutz{
   padding: 0 150px 100px 150px;
+}
+.datenschutz a {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
