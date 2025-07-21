@@ -396,7 +396,7 @@ margin-top: 80px;
 .wok-vs-pan-site {
   margin: 0px;
   margin-top: 64px;
-  padding-left: 110px;
+  padding: 150px;
       display: block;
     unicode-bidi: isolate;
 }
@@ -431,9 +431,9 @@ ul {
 }
 
 .vergleichstabelle {
-  margin: 40px auto;
+ 
   max-width: 1000px;
-  padding: 0 20px;
+  
 }
 
 .vergleichstabelle h1 {
@@ -613,8 +613,9 @@ ul {
     justify-content: center;
   }
   .wok-vs-pan-site {
-    padding-left: 40px;
+    padding: 50px;
     margin-top: 80px;
+    text-align: center;
   }
 .vergleichstabelle {
     padding: 0 10px;
@@ -667,7 +668,7 @@ ul {
     padding: 40px 10px;
   }
   .wok-vs-pan-site {
-    padding-left: 20px;
+    padding: 20px;
   }
 
   .vergleichstabelle {
@@ -704,21 +705,24 @@ ul {
     gap: 8px;
   }
     .wok-vs-pan-site {
-    padding-left: 10px;
+    padding: 0px;
     margin-top: 60px;
   }
 
   .vergleichstabelle {
-    padding: 0 5px;
+    padding: 0px;
   }
 
   .vergleichstabelle table {
-    font-size: 13px;
+    font-size: 11px;
   }
 
   .vergleichstabelle th,
   .vergleichstabelle td {
     padding: 8px;
+  }
+  ul{
+    padding: 10px;
   }
 }
 
@@ -752,7 +756,7 @@ ul {
 
   .vergleichstabelle th,
   .vergleichstabelle td {
-    padding: 6px;
+    padding: 3px;
   }
 }
 
@@ -971,6 +975,12 @@ small {
         padding-top: 20px;
 
     }
+    .impressum{
+      padding: 200px 50px 0 50px !important;
+    }
+     .datenschutz{
+      padding: 0 50px 100px 50px !important;
+    }
 
 }
 .impressum{
@@ -985,4 +995,9 @@ small {
 }
 .datenschutz{
   padding: 0 150px 100px 150px;
+}
+.datenschutz a {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
