@@ -1,0 +1,763 @@
+@font-face {
+  font-family: 'Raleway';
+  src: url('./fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: "raleway";
+}
+
+header {
+  display: flex;
+  justify-content: space-around;
+  box-shadow: 1px -4px 10px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+}
+
+header img {
+  height: 86px;
+  margin: 10px 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: end;
+  width: 400px;
+  padding-bottom: 10px;
+}
+
+.navlink {
+  position: relative;
+  text-decoration: none;
+  font-weight: 600;
+  color: #2c2c2c;
+  padding: 5px 0;
+}
+
+.navlink:hover {
+  color: #008000;
+}
+
+.navlink::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #008000;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.navlink:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.highlight-recipe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  margin: 140px 20px 60px 20px;
+  padding: 40px 20px;
+  border-radius: 12px;
+}
+
+.highlight-recipe img {
+  width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-text {
+  max-width: 500px;
+}
+
+.highlight-text h2 {
+  margin-top: 0;
+  font-size: 28px;
+  color: #575757;
+}
+
+.highlight-text p {
+  font-size: 16px;
+  margin: 16px 0;
+  color: #555;
+}
+
+.highlight-text button {
+  padding: 10px 20px;
+  background-color: #008000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.highlight-text button:hover {
+  background-color: #006600;
+}
+
+/* just-for- new */
+.just-for-new {
+  background-color: #e6e5e5;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.just-for-new h2 {
+  font-size: 28px;
+  color: #2c2c2c;
+  margin-bottom: 40px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.recipe-card {
+  background-color: white;
+  width: 220px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  padding: 10px;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+}
+
+.recipe-card img {
+  width: 100%;
+  border-radius: 12px;
+}
+
+.recipe-card p {
+  margin: 12px;
+  font-weight: 600;
+  color: #000000;
+}
+
+/* Wok vs Pfanne */
+.article-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 80px 20px;
+  background-color: #ffffff;
+  flex-wrap: wrap;
+}
+
+.article-section img {
+  width: 400px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.article-text {
+  max-width: 500px;
+  text-align: left;
+}
+
+.article-text h2 {
+  font-size: 28px;
+  color: #2c2c2c;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.article-text p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.article-text button {
+  padding: 10px 24px;
+  background-color: #008000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.article-text button:hover {
+  background-color: #006600;
+}
+
+/* footer */
+
+footer {
+  background-color: #1e1e1e;
+  padding: 30px 20px;
+  color: #ffffff;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.footer-left img {
+  height: 40px;
+}
+
+.footer-brand {
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-socials .social {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 900;
+  font-size: 14px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.footer-socials .social img {
+  height: 20px;
+}
+
+.social.facebook {
+  background-color: #1877f2;
+}
+
+.social.instagram {
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+.social.x {
+  background: linear-gradient(to right, #000000, #2e2e2e, #353535);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+
+.footer-socials .social:hover {
+  transform: scale(1.05);
+}
+
+.footer-socials .social .social-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.footer-socials .social .small-text {
+  font-size: 10px;
+  font-weight: 400;
+  margin-bottom: -1px;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  padding: 50px 86px;
+  padding-bottom: 0;
+  cursor: pointer;
+}
+
+.burger span {
+  display: block;
+  height: 3px;
+  background: #008000;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Burger nur sichtbar ab 1024px runter */
+@media (max-width: 1024px) {
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  nav.show {
+    max-height: 300px;
+    /* anpassen je nach Links */
+  }
+
+  .burger {
+    display: flex;
+    margin-right: 20px;
+  }
+
+  nav a {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #eee;
+  }
+
+  .burger.active span:nth-child(1) {
+    transform: rotate(45deg) translateY(7px);
+  }
+
+  .burger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.active span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-7px);
+  }
+}
+
+/*RESPONSIVE*/
+@media (max-width: 1024px) {
+  header {
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.2);
+    flex-direction: column;
+    align-items: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  nav.show {
+    max-height: 300px;
+  }
+
+  .burger {
+    display: flex;
+    margin-right: 20px;
+  }
+
+  nav a {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    border-top: 1px solid #eee;
+  }
+
+  .highlight-recipe {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    width: auto;
+    padding: 0 10px 10px 10px;
+  }
+
+  .highlight-recipe {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .highlight-recipe img {
+    width: 80%;
+    max-width: 400px;
+  }
+
+  .highlight-text {
+    max-width: 90%;
+  }
+
+  .article-section {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .article-section img {
+    width: 80%;
+    max-width: 400px;
+  }
+
+  .article-text {
+    max-width: 90%;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-left {
+    justify-content: center;
+  }
+
+  .footer-socials {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header img {
+    height: 60px;
+    margin: 10px 0;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.2);
+  }
+
+  nav a {
+    margin: 5px 0;
+  }
+
+  .highlight-recipe {
+    margin: 120px 10px 40px 10px;
+    padding: 20px 10px;
+  }
+
+  .card-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .recipe-card {
+    width: 80%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .article-section {
+    padding: 40px 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header img {
+    height: 50px;
+  }
+
+  .highlight-recipe img,
+  .article-section img {
+    width: 100%;
+  }
+
+  .footer-socials .social {
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .footer-socials {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 320px) {
+  .navlink {
+    font-size: 14px;
+  }
+
+  .highlight-text h2,
+  .article-text h2 {
+    font-size: 20px;
+  }
+
+  .highlight-text p,
+  .article-text p {
+    font-size: 14px;
+  }
+
+  .highlight-text button,
+  .article-text button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+.mainbody {
+    padding-left: 150px;
+    padding-right: 150px;
+}
+h1 {
+    font-weight: 600;
+    margin-top: 200px;
+}
+
+h2 {
+    font-weight: 600;
+}
+
+h3 {
+    font-weight: 600;
+}
+
+.rezept_Img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 32px;
+    border-radius: 12px;
+}
+
+.rezept_icons {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+
+.icon_backgr {
+    background-color: #efefef;
+    padding: 4px;
+    width: 70px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.icon_backgr_date {
+    background-color: #efefef;
+    padding: 4px;
+    width: 100px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.icons {
+    width: 12px;
+}
+
+.input_portionen {
+    width: 200px;
+    height: 36px;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #d1cece;
+    display: inline-block;
+    vertical-align: none;
+    margin: 0;
+    margin-left: 12px;
+}
+
+.portionen_button {
+    padding: 0 40px;
+    height: 40px;
+    background-color: #008000;
+    color: white;
+    border: 1px solid #d1cece;
+    border-left: none;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.portionen_wrapper {
+    display: inline-block;
+}
+
+.linie {
+    height: 1px;
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.ingredients td {
+    box-sizing: border-box;
+    padding: 16px;
+}
+
+.td-left {
+    width: 20px;
+    border-radius: 8px;
+}
+
+.icons_zubereitung {
+    display: flex;
+    width: 700px;
+    justify-content: space-between;
+}
+
+.span_icon {
+    width: 200px;
+}
+
+.profile_img {
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+}
+
+.last_section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.last_section span {
+    padding-left: 50px;
+    font-size: 20px;
+}
+
+small {
+    font-size: 14px;
+    ;
+}
+
+@media (max-width: 1020px) {
+    .mainbody {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .span_icon {
+        width: 200px;
+    }
+
+    .icons_zubereitung {
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon_backgr {
+        margin-bottom: 8px;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 670px) {
+    .mainbody {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .rezept_icons {
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width:574px) {
+
+    .portionen_wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input_portionen {
+        border-radius: 10px;
+        margin-left: 0px;
+
+    }
+
+    .last_section {
+        flex-direction: column;
+    }
+
+    .last_section span {
+        padding-left: 0px;
+        padding-top: 20px;
+
+    }
+}

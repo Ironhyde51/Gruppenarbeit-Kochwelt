@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'Raleway';
+  src: url('./fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 0;
   font-family: "raleway";
@@ -25,6 +32,7 @@ nav {
   align-items: end;
   width: 400px;
   padding-bottom: 10px;
+  z-index: 10
 }
 
 .navlink {
@@ -57,6 +65,7 @@ nav {
   transform-origin: left;
 }
 
+/* highlight */
 .highlight-recipe {
   display: flex;
   align-items: center;
@@ -68,7 +77,7 @@ nav {
 }
 
 .highlight-recipe img {
-  width: 400px;
+  width: 500px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -80,7 +89,7 @@ nav {
 .highlight-text h2 {
   margin-top: 0;
   font-size: 28px;
-  color: #575757;
+  color: #000000;
 }
 
 .highlight-text p {
@@ -134,15 +143,20 @@ nav {
   text-decoration: none;
   color: inherit;
   display: block;
+  
 }
 
 .recipe-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  background-color: rgb(173, 245, 163);
 }
 
 .recipe-card img {
   width: 100%;
+  height: 150px;
   border-radius: 12px;
+  object-fit: cover;
+  
 }
 
 .recipe-card p {
@@ -163,8 +177,9 @@ nav {
 }
 
 .article-section img {
-  width: 400px;
-  height: auto;
+  object-fit: cover;
+  width: 200px;
+  height: 200px;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -309,7 +324,163 @@ footer {
   transition: all 0.3s ease;
 }
 
-/* Burger nur sichtbar ab 1024px runter */
+/* Kontaktformular */
+.kontakt-section {
+  background-color: #e6e5e5;
+  padding: 80px 20px;
+margin-top: 80px;
+  display:flex;
+  justify-content: center;
+}
+
+.kontaktformular {
+  background-color: #d3d3d3;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+}
+
+.kontaktformular h2 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  color: #2c2c2c;
+  text-align: center;
+}
+
+.kontaktformular label {
+  display: block;
+  font-weight: 600;
+  color: #2c2c2c;
+  margin-bottom: 8px;
+  margin-top: 16px;
+}
+
+.kontaktformular input,
+.kontaktformular textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-family: inherit;
+  border: none;
+  border-radius: 6px;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: white;
+}
+
+.kontaktformular textarea {
+  resize: vertical;
+}
+
+.kontaktformular button {
+  margin-top: 24px;
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #008000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background-color 0.3s ease;
+}
+
+.kontaktformular button:hover {
+  background-color: #006600;
+}
+
+/* wok vs pfanne- info seite*/
+
+.wok-vs-pan-site {
+  margin: 0px;
+  margin-top: 64px;
+  padding: 150px;
+      display: block;
+    unicode-bidi: isolate;
+}
+
+
+h1, h3 {
+  color: #006600;
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+}
+
+th {
+  background-color: #f5f5f5;
+}
+
+ul {
+  list-style: disc inside;
+}
+
+.vergleichstabelle {
+ 
+  max-width: 1000px;
+  
+}
+
+.vergleichstabelle h1 {
+  font-size: 2rem;
+  color: #008000;
+  margin-bottom: 20px;
+}
+
+.vergleichstabelle table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.vergleichstabelle thead {
+  background: #f5f5f5;
+}
+
+.vergleichstabelle th,
+.vergleichstabelle td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.vergleichstabelle tbody tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+.vergleichstabelle tbody tr:nth-child(odd) {
+  background: #ffffff;
+}
+
+.vergleichstabelle th {
+  font-weight: bold;
+  border-bottom: 2px solid #ddd;
+}
+
+.vergleichstabelle td {
+  border-bottom: 1px solid #eee;
+}
+
+.vergleichstabelle td:first-child {
+  font-weight: 500;
+}
+
+
+/* Burger 1024px*/
 @media (max-width: 1024px) {
   nav {
     position: absolute;
@@ -442,6 +613,18 @@ footer {
   .footer-socials {
     justify-content: center;
   }
+  .wok-vs-pan-site {
+    padding: 50px;
+    margin-top: 80px;
+    text-align: center;
+  }
+.vergleichstabelle {
+    padding: 0 10px;
+  }
+
+  .vergleichstabelle table {
+    font-size: 15px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -485,6 +668,22 @@ footer {
   .article-section {
     padding: 40px 10px;
   }
+  .wok-vs-pan-site {
+    padding: 20px;
+  }
+
+  .vergleichstabelle {
+    padding: 0 10px;
+  }
+
+  .vergleichstabelle table {
+    font-size: 14px;
+  }
+
+  .vergleichstabelle h1 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
@@ -505,6 +704,26 @@ footer {
   .footer-socials {
     flex-direction: column;
     gap: 8px;
+  }
+    .wok-vs-pan-site {
+    padding: 0px;
+    margin-top: 60px;
+  }
+
+  .vergleichstabelle {
+    padding: 0px;
+  }
+
+  .vergleichstabelle table {
+    font-size: 11px;
+  }
+
+  .vergleichstabelle th,
+  .vergleichstabelle td {
+    padding: 8px;
+  }
+  ul{
+    padding: 10px;
   }
 }
 
@@ -528,4 +747,258 @@ footer {
     font-size: 14px;
     padding: 8px 16px;
   }
+   .vergleichstabelle h1 {
+    font-size: 1.4rem;
+  }
+
+  .vergleichstabelle table {
+    font-size: 12px;
+  }
+
+  .vergleichstabelle th,
+  .vergleichstabelle td {
+    padding: 3px;
+  }
+}
+
+.mainbody {
+  padding: 150px 150px 100px 150px;
+}
+.rezept_topic {
+    font-weight: 600;
+    color:#000000;
+}
+
+.rezept_Img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 32px;
+    border-radius: 12px;
+}
+
+.rezept_icons {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+
+.icon_backgr {
+    background-color: #efefef;
+    padding: 4px;
+    width: 70px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.icon_backgr_date {
+    background-color: #efefef;
+    padding: 4px;
+    width: 100px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.icons {
+    width: 12px;
+}
+
+.input_portionen {
+    width: 200px;
+    height: 36px;
+    border-radius: 10px 0 0 10px;
+    border: 1px solid #d1cece;
+    display: inline-block;
+    vertical-align: none;
+    margin: 0;
+    margin-left: 12px;
+}
+
+.portionen_button {
+    padding: 0 40px;
+    height: 40px;
+    background-color: #008000;
+    color: white;
+    border: 1px solid #d1cece;
+    border-left: none;
+    border-radius: 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.portionen_wrapper {
+    display: inline-block;
+}
+
+.linie {
+    height: 1px;
+    width: 100%;
+    background-color: #f2f2f2;
+}
+
+.ingredients {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border:none;
+}
+
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.ingredients td {
+    box-sizing: border-box;
+    padding: 16px;
+}
+
+.td-left {
+    width: 20px;
+    border-radius: 8px;
+    border: none;
+}
+
+.icons_zubereitung {
+    display: flex;
+    width: 700px;
+    justify-content: space-between;
+}
+
+.span_icon {
+    width: 200px;
+}
+
+.profile_img {
+    border-radius: 100%;
+    width: 100px;
+}
+
+.last_section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.last_section span {
+    padding-left: 50px;
+    font-size: 20px;
+}
+
+small {
+    font-size: 14px;
+    ;
+}
+
+@media (max-width: 1020px) {
+    .mainbody {
+        padding: 200px 100px 0 100px;
+    }
+
+    .span_icon {
+        width: 200px;
+    }
+
+    .icons_zubereitung {
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon_backgr {
+        margin-bottom: 8px;
+    }
+
+    p {
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+    }
+
+    h2 {
+        text-align: center;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 670px) {
+    .mainbody {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .rezept_icons {
+        width: auto;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width:574px) {
+
+    .portionen_wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input_portionen {
+        border-radius: 10px;
+        margin-left: 0px;
+
+    }
+
+    .last_section {
+        flex-direction: column;
+    }
+
+    .last_section span {
+        padding-left: 0px;
+        padding-top: 20px;
+
+    }
+    .impressum{
+      padding: 200px 50px 0 50px !important;
+    }
+     .datenschutz{
+      padding: 0 50px 100px 50px !important;
+    }
+
+}
+.impressum{
+      padding: 150px 150px 0 150px;
+}
+.link_Impressum{
+  text-decoration: none;
+    color: black;
+}
+.link_Impressum:hover {
+  color: #008000;
+}
+.datenschutz{
+  padding: 0 150px 100px 150px;
+}
+.datenschutz a {
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }
