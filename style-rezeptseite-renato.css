@@ -216,6 +216,10 @@ footer {
   background-color: #1e1e1e;
   padding: 30px 20px;
   color: #ffffff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 
 .footer-content {
