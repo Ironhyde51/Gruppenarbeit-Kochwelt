@@ -64,6 +64,19 @@ nav {
   transform: scaleX(1);
   transform-origin: left;
 }
+
+main{
+  flex: 1;
+  min-height: 100vh;
+}
+@media (min-width: 1400px){
+.page-wrapper{
+  max-width: 1200px; /* oder z. B. 960px */
+  margin: 0 auto;     /* zentriert horizontal */
+  
+  width: 100%;
+}
+}
 .highlight-recipe{
     display: flex;
     align-items: center;

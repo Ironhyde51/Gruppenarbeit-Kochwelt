@@ -63,6 +63,18 @@ nav {
   transform: scaleX(1);
   transform-origin: left;
 }
+main{
+  flex: 1;
+  min-height: 100vh;
+}
+@media (min-width: 1400px){
+.page-wrapper{
+  max-width: 1200px; /* oder z. B. 960px */
+  margin: 0 auto;     /* zentriert horizontal */
+  
+  width: 100%;
+}
+}
 
 .highlight-recipe {
   display: flex;
@@ -216,10 +228,7 @@ footer {
   background-color: #1e1e1e;
   padding: 30px 20px;
   color: #ffffff;
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
+  
 }
 
 .footer-content {
@@ -369,7 +378,7 @@ footer {
 @media (max-width: 1024px) {
   header {
     justify-content: space-between;
-    padding: 10px 20px;
+    
   }
 
   nav {
@@ -471,6 +480,7 @@ footer {
     align-items: center;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.2);
+    padding: 0 0px 10px 0px;
   }
 
   nav a {
