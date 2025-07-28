@@ -53,44 +53,42 @@
 
         <section class="portionen_wrapper">
             <label for="portionen"> Zutaten für </label>
-            <input class="input_portionen" id="portionen" type="number" min="1" max="8" value="4"><input
-                class="portionen_button" type="submit" value="Portionen">
+           <input class="input_portionen" id="portionen" type="number" min="1" max="8" value="1"><button
+                class="portionen_button" onclick="rechneMenge()">Portionen</button>
         </section>
         <br>
         <br>
         <table class="ingredients">
             <tr>
-                <td class="td-left" data-base="1" data-einheit=" Stück" data-name="Schweineschnitzel">4
+                <td class="td-left" id="rr-Schweineschnitzel" >1
                     Schweineschnitzel</td>
             </tr>
             <tr>
-                <td class="td-left" data-base="0.75" data-einheit=" Stück" data-name="Knoblauchzehe(n)">3
-                    Knoblauchzehe(n)</td>
+                <td class="td-left" id="rr-Knoblauch" ><span style='font-size: 18px;'>¾</span> Knoblauchzehe(n)</td>
             </tr>
             <tr>
-                <td class="td-left" data-base="0.5" data-einheit=" Stück" data-name="Zwiebel(n)">2 Zwiebel(n)</td>
+                <td class="td-left" id="rr-Zwiebeln" ><span style='font-size: 18px;'>½</span> Zwiebel(n)</td>
             </tr>
             <tr>
-                <td class="td-left" data-base="0.5" data-einheit=" EL" data-name="Zitronensaft">2 EL Zitronensaft</td>
+                <td class="td-left" id="rr-Zitronensaft" ><span style='font-size: 18px;'>½</span> EL Zitronensaft</td>
             </tr>
             <tr>
-                <td class="td-left" data-base="0.75" data-einheit=" TL" data-name="Majoran">3 TL Majoran</td>
+                <td class="td-left" id="rr-Majoran" ><span style='font-size: 18px;'>¾</span> TL Majoran</td>
             </tr>
             <tr>
-                <td class="td-left" data-base="0.5" data-einheit=" TL" data-name="Thymian">2 TL Thymian</td>
+                <td class="td-left" id="rr-Thymian" ><span style='font-size: 18px;'>½</span> TL Thymian</td>
             </tr>
             <tr>
-                <td class="td-left" data-base="0.75" data-einheit=" TL" data-name="Paprikapulver, edelsüß">3 TL
-                    Paprikapulver, edelsüß</td>
+                <td class="td-left" id="rr-Paprikapulver" ><span style='font-size: 18px;'>¾</span> TL Paprikapulver, edelsüß</td>
             </tr>
             <tr>
-                <td class="td-left" data-base="0.25" data-einheit=" TL" data-name="Kreuzkümmel">1 TL Kreuzkümmel</td>
+                <td class="td-left" id="rr-Kreuzkümmel" ><span style='font-size: 18px;'>¼</span> TL Kreuzkümmel</td>
             </tr>
             <tr>
                 <td class="td-left">Salz und Pfeffer</td>
             </tr>
             <tr>
-                <td class="td-left" data-base="1.5" data-einheit=" cl" data-name="Olivenöl">6 cl Olivenöl</td>
+                <td class="td-left" id="rr-Olivenöl" >1,5 cl Olivenöl</td>
             </tr>
 
         </table>
@@ -181,7 +179,7 @@
     </footer>
 
 
-    <script src="javascript.js"></script>
+    <script src="Rezeptseite-Renato.js"></script>
 </body>
 
 </html>
