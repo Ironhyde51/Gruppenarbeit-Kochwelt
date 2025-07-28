@@ -57,32 +57,32 @@
 
         <section class="portionen_wrapper">
             <label for="portionen"> Zutaten für </label>
-            <input class="input_portionen" id="portionen" type="number" min="1" max="8" value="4"><input
-                class="portionen_button" type="submit" value="Portionen">
+            <input class="input_portionen" id="portionen" type="number" min="1" max="8" value="1"><button
+                class="portionen_button" onclick="rechneMenge()">Portionen</button>
         </section>
         <br>
         <br>
        <table class="ingredients">
   <tr>
-    <td class="td-left" data-base="250" data-einheit=" g" data-name="Butter">1.000 g Butter</td>
+    <td class="td-left" id="RdT-Butter" >250g Butter</td>
   </tr>
   <tr>
-    <td class="td-left" data-base="50" data-einheit=" g" data-name="Zucker">200 g Zucker</td>
+    <td class="td-left" id="RdT-Zucker">50g Zucker</td>
   </tr>
   <tr>
-    <td class="td-left" data-base="500" data-einheit=" g" data-name="Mehl">2.000 g Mehl</td>
+    <td class="td-left" id="RdT-Mehl">500g Mehl</td>
   </tr>
   <tr>
-    <td class="td-left" data-base="1" data-einheit=" Prise(n)" data-name="Salz">4 Prise(n) Salz</td>
+    <td class="td-left" id="RdT-Salz" >1 Prise(n) Salz</td>
   </tr>
   <tr>
-    <td class="td-left" data-base="42" data-einheit=" g" data-name="Hefe">168 g Hefe</td>
+    <td class="td-left" id="RdT-Hefe">42g Hefe</td>
   </tr>
   <tr>
-    <td class="td-left" data-base="2" data-einheit="" data-name="Ei(er)">8 Ei(er)</td>
+    <td class="td-left" id="RdT-Eier">2 Ei(er)</td>
   </tr>
   <tr>
-    <td class="td-left" data-base="0.2" data-einheit=" Liter" data-name="Milch">0,8 Liter Milch (ungefähr, je nach Mehl)</td>
+    <td class="td-left" id="RdT-Milch">0,2 Liter Milch (ungefähr, je nach Mehl)</td>
   </tr>
 </table>
 
@@ -167,7 +167,7 @@
     </footer>
 
 
-    <script src="javascript.js"></script>
+    <script src="Rezept-des-Tages.js"></script>
 </body>
 
 </html>
