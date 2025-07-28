@@ -42,7 +42,7 @@ function setBruchText(id, menge, einheit) {
 
     // Vergleicht gerundete Zahl mit Bruchschlüssel
     if (bruchTexte[menge]) {
-        element.innerHTML = `<span style='font-size: 18px;'>${bruchTexte[menge]}</span> ${einheit}`;
+        element.innerHTML = "<span style='font-size: 18px;'>" + bruchTexte[menge] + "</span> " + einheit;
     }
 }
 
