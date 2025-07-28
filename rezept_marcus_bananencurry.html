@@ -5,70 +5,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kochwelt-Bananencurry</title>
-    <link rel="stylesheet" href="rezept_marcus_style_bananencurry.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="./img/favicon.ico">
     
-
 </head>
-
 
 <body>
     <header id="header">
-        <a href="index.html">
-            <img src="./logo.png" alt="Logo der Kochwelt">
-        </a> <!--style="padding-right:100px"; -->
+    <a href="index.html">
+      <img src="./logo.png" alt="Logo der Kochwelt">
+    </a>
         <nav id="header_menu">
             <a class="navlink" href="index.html">Start</a>
             <a class="navlink" href="rezept-des-tages.html">Rezept des Tages</a>
-            <a class="navlink" href="kontaktformular.html">Kontakt</a>
-            <a class="navlink" href="/Impressum.html">Impressum</a>
+            <a class="navlink" href="kontaktformular.html">Kontakte</a>
+            <a class="navlink" href="Impressum.html">Impressum</a>
         </nav>
-
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </header>
-    <main id="main" class="main">
-        <section class="highlight-recipe">
 
 
-            <div class="heiglight-text">
-                <h2>Bananencurry</h2>
-                <img class="firstphoto" src="./img/rezept-bananencurry-marcus.png" alt="Bild des Heiglight Rezept">
 
 
-                <p>Zutaten für <input id="amount" type="number" name="guests" class="input-box"
-                        title="Bitte geben Sie nur Zahlen ein" value="1" min="1"> Personen
-                    <button onclick="calculate()">Portionen</button>
-                </p>
+    <main class="mainbody page-wrapper">
+        <h1 class="rezept_topic"> Bananencurry</h1>
+        <img class="rezept_Img" src="./img/rezept-bananencurry-marcus.png"  alt="Bananencurry">
+
+        <small class="rezept_icons">
+            <span class="icon_backgr">
+                <img class="icons" src="./img/icons/clock-regular.svg" alt="Dauer">
+                20 Min.
+            </span>
+            <span class="icon_backgr">
+                <img class="icons" src="./img/icons/brain-solid.svg" alt="Schwierigkeitsgrad">
+                Simpel
+            </span>
+            <span class="icon_backgr_date">
+                <img class="icons" src="./img/icons/calendar-alt-regular.svg" alt="Datum">
+                19.07.2025
+            </span>
+        </small>
+        <br>
+        <br>
+        <br>
+        <div class="linie"></div>
+        <br>
 
 
-                <li><span id="cutlet"> 1 </span> Schweineschnitzel</li><br>
-                <li><span id="pepper"> ½ </span> Paprikaschote(n), Farbe nach Wahl</li><br>
-                <li><span id="onion"> ¼ </span> große Zwiebel(n)</li><br>
-                <li><span id="cocos">100 ml</span> &nbsp;Kokosmilch</li><br>
-                <li><span id="banana"> ¾ </span> Banane(n)</li><br>
-                <li>Salz und Pfeffer</li><br>
-                <li>etwas Öl</li><br>
-                <li>Currypulver</li><br>
+
+<section class="portionen_wrapper">
+            <label for="portionen"> Zutaten für </label>
+            <input class="input_portionen" id="portionen" type="number" min="1" max="8" value="4"><input
+                class="portionen_button" type="submit" value="Portionen">
+        </section>
+        <br>
+        <br>
+        <table class="ingredients">
+             <tr>
+                <td class="td-left" data-base="1" data-name="Schweineschnitzel">1 Schweineschnitzel</td>
+            </tr>
+
+            <tr>
+                <td class="td-left" data-base="0.5" data-name="Paprikaschote(n), Farbe nach Wahl">½ Paprikaschote(n), Farbe nach Wahl</td>
+            </tr>
+
+            <tr>
+                <td class="td-left" data-base="0.25" data-name="Zwiebel">¼ große Zwiebel(n)</td>
+            </tr>
 
 
-                <p><b>Zubereitung</b><br>
-                    <br>
-                <p>Arbeitszeit ca. 15 Minuten Koch-/Backzeit ca. 15 Minuten Gesamtzeit ca. 30 Minuten</p>
+            <tr>
+                <td class="td-left" data-base="100" data-einheit="ml" data-name="Kokosmilch">100 ml Kokosmilch</td>
+            </tr>
 
-                <p>Die Schnitzel und die Paprikaschoten in Streifen schneiden. Die Zwiebel schälen, in grobe Würfel
-                    schneiden. Öl in einer Pfanne oder einem Wok erhitzen. Die Zwiebeln darin glasig anbraten. Das
-                    Fleisch dazugeben und scharf anbraten. Mit Salz, Pfeffer, und Currypulver gut würzen. Die
-                    Paprikastreifen dazugeben und kurz mitbraten. Mit der Kokosmilch ablöschen und ca. 5 Minuten
-                    zugedeckt köcheln lassen. Die Bananen schälen, in Scheiben schneiden und kurz mit erhitzen.
-                    Dazu Basmatireis servieren.</p>
-                </p>
+             <tr>
+                <td class="td-left" data-base="0.75" data-name="Paprikaschote(n), Farbe nach Wahl">¾ Banane(n), Farbe nach Wahl</td>
+            </tr>
 
-            </div>
+            <tr>
+                <td class="td-left">Salz und Pfeffer</td>
+            </tr>
+                                    
+            <tr>
+                <td class="td-left">etwas Öl</td>          
+            </tr>
+         
+            <tr>
+                <td class="td-left">Currypulver</td>
+            </tr>
+        </table>
 
+        <br>
+        <section>
+            <h2 class="rezept_topic">Zubereitung</h2>
+            <small class="icons_zubereitung">
+                <span class="icon_backgr span_icon">
+                    <img class="icons" src="./img/icons/clock-regular.svg" alt="Kleine Uhr">
+                    Arbeitszeit ca. 15 Min.
+                </span>
+                <span class="icon_backgr span_icon">
+                    <img class="icons" src="./img/icons/clock-regular.svg" alt="Kleine Uhr">
+                    Koch-/Backzeit ca. 15 Min.
+                </span>
+                <span class="icon_backgr span_icon">
+                    <img class="icons" src="./img/icons/clock-regular.svg" alt="Kleine Uhr">
+                    Gesamtzeit ca. 30 Min.
+                </span>
+            </small>
+            <p>
+            Schnitzel und Paprikaschoten in Streifen schneiden. Die Zwiebel schälen, in grobe Würfel
+            schneiden. Öl in einer Pfanne oder einem Wok erhitzen. Die Zwiebeln darin glasig anbraten. Das
+            Fleisch dazugeben und scharf anbraten. Mit Salz, Pfeffer, und Currypulver gut würzen. Die
+            Paprikastreifen dazugeben und kurz mitbraten. Mit der Kokosmilch ablöschen und ca. 5 Minuten
+            zugedeckt köcheln lassen. Die Bananen schälen, in Scheiben schneiden und kurz mit erhitzen.
+            Dazu Basmatireis servieren.
+            </p>
+            <br>
+        </section>
+
+        <h3 class="rezept_topic">Rezept erstellt von</h3>
+        <section class="last_section">
+            <img class="profile_img" src="./img/Profilbild-Marcus.jpg" alt="Profilfoto">
+            <span>Marcus Neuhaus </span>
         </section>
     </main>
-    <footer id="footer"></footer>
+    <footer id="footer">
+        <div class="footer-content">
+            <div class="footer-left">
+                <img src="./img/favicon.ico" alt="Kochwelt Logo">
+                <span class="footer-brand">Kochwelt</span>
+            </div>
+            <div class="footer-socials">
+                <a href="https://www.facebook.com/?locale=de_DE" class="social facebook" target="_blank">
+                    <img src="./img/facebook.svg" alt="Facebook">
+                    <div class="social-text">
+                        <span class="small-text">follow us on</span>Facebook
+                    </div>
+                </a>
+                <a href="https://www.instagram.com/" class="social instagram" target="_blank">
+                    <img src="./img/instagram.svg" alt="Instagram">
+                    <div class="social-text">
+                        <span class="small-text">follow us on</span>Instagram
+                    </div>
+                </a>
+                <a href="https://x.com/?lang=de" class="social x" target="_blank">
+                    <img src="./img/x.svg" alt="X">
+                    <div class="social-text">
+                        <span class="small-text">follow us on</span>X
+                    </div>
+                </a>
+            </div>
+        </div>
+    </footer>
 
+
+    <script src="javascript.js"></script>
 </body>
-<script src="rezept_marcus_bananencurry_javascript.js"></script>
 
 </html>
+
+
+
+
+

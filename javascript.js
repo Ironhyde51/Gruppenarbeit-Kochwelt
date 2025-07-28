@@ -5,141 +5,58 @@ burger.addEventListener('click', () => {
   burger.classList.toggle('active');
   nav.classList.toggle('show');
 });
-function dezimalZuBruch(zahl) {
-    const ganze = Math.floor(zahl);
-    const rest = +(zahl - ganze).toFixed(2);
+// Basisdaten als Objekt
+let zutaten = {
+    spaghetti: 150,  // Gramm für 1 Portion
+    garnelen: 125,
+    Sahne: 50,
+    Tomaten: 50,
+    Knoblauch: 1,
+    Zwiebel: 1 / 4,
+};
 
-    const brueche = {
-        0.2: "⅕",
-        0.25: "¼",
-        0.33: "⅓",
-        0.4: "⅖",
-        0.5: "½",
-        0.6: "⅗",
-        0.66: "⅔",
-        0.75: "¾",
-        0.8: "⅘"
-    };
+function rechneMenge() {
+    // Portionen aus Input lesen
+    let portionen = document.getElementById('portionen').value;
 
-    let bruch = "";
-    for (let dez in brueche) {
-        if (Math.abs(rest - dez) < 0.05) {
-            bruch = brueche[dez];
-            break;
-        }
+    // Prüfen, ob Portionen gültig sind
+    if (portionen < 1) {
+        portionen = 1;
+    } else if (portionen > 8) {
+        portionen = 8;
+        alert("Bitte gebe einen Wert zwischen 1 und 8 ein.");
     }
 
-    if (ganze === 0 && bruch !== "") return bruch;
-    if (bruch !== "") return `${ganze} ${bruch}`;
-    return zahl % 1 === 0 ? ganze : zahl.toFixed(1); // Fallback
-}
+    // Menge berechnen
+    let mengeSpaghetti = zutaten.spaghetti * portionen;
+    let mengeGarnelen = zutaten.garnelen * portionen;
+    let mengeSahne = zutaten.Sahne * portionen;
+    let mengeTomaten = zutaten.Tomaten * portionen;
+    let mengeZwiebel = zutaten.Zwiebel * portionen;
+    let mengeKnoblauch = zutaten.Knoblauch * portionen;
+
+    // Ergebnis anzeigen
+    document.getElementById('menge-spaghetti').innerHTML = mengeSpaghetti + "g Spaghetti";
+    document.getElementById('menge-garnelen').innerHTML = mengeGarnelen + "g Garnelen";
+    document.getElementById('menge-sahne').innerHTML = mengeSahne + "ml Sahne";
+    document.getElementById('menge-tomaten').innerHTML = mengeTomaten + "ml passierte Tomaten";
+    document.getElementById('menge-knoblauch').innerHTML = mengeKnoblauch + " Knoblauchzehe(n)";
+    document.getElementById('menge-zwiebel').innerHTML = mengeZwiebel + " Zwiebeln";
 
 
-
-document.addEventListener("DOMContentLoaded", function () {
-    const portionInput = document.getElementById("portionen");
-    const portionButton = document.querySelector(".portionen_button");
-    const zutaten = document.querySelectorAll(".td-left");
-
-    const originalMengen = [];
-
-    // Ursprüngliche Mengen speichern
-    zutaten.forEach((zutat) => {
-        const base = zutat.getAttribute("data-base");
-        if (base) {
-            originalMengen.push({
-                element: zutat,
-            base: parseFloat(base),
-            einheit: zutat.getAttribute("data-einheit") || "",
-            name: zutat.getAttribute("data-name") || ""
-            });
-        }
-    });
-
-    portionButton.addEventListener("click", function () {
-        const portionen = parseFloat(portionInput.value);
-        if (!portionen || portionen < 1 || portionen > 8) {
-            alert("Bitte gib eine Anzahl zwischen 1 und 8 Portionen ein.");
-            return;
-        }
-        
-
-        originalMengen.forEach((item) => {
-            let berechnet = item.base * portionen;
-            let neueMenge = dezimalZuBruch(berechnet);
-            item.element.textContent = `${neueMenge}${item.einheit} ${item.name}`.trim();
-        });
-    });
-    portionButton.click();
-});
-
-
-
-
-function dezimalZuBruch(zahl) {
-    const ganze = Math.floor(zahl);
-    const rest = +(zahl - ganze).toFixed(2);
-
-    const brueche = {
-        0.2: "⅕",
-        0.25: "¼",
-        0.33: "⅓",
-        0.4: "⅖",
-        0.5: "½",
-        0.6: "⅗",
-        0.66: "⅔",
-        0.75: "¾",
-        0.8: "⅘"
-    };
-
-    let bruch = "";
-    for (let dez in brueche) {
-        if (Math.abs(rest - dez) < 0.05) {
-            bruch = brueche[dez];
-            break;
-        }
+    if (mengeZwiebel == 0.25) {
+        document.getElementById('menge-zwiebel').innerHTML = "<span style='font-size: 18px;'>¼</span> Zwiebel(n)";
+    } else if (mengeZwiebel == 0.5) {
+        document.getElementById('menge-zwiebel').innerHTML = "<span style='font-size: 18px;'>½</span> Zwiebel(n)";
+    } else if (mengeZwiebel == 0.75) {
+        document.getElementById('menge-zwiebel').innerHTML = "<span style='font-size: 18px;'>¾</span> Zwiebel(n)";
+    } else if (mengeZwiebel == 1.25) {
+        document.getElementById('menge-zwiebel').innerHTML = "<span style='font-size: 18px;'>1¼</span> Zwiebel(n)";
+    } else if (mengeZwiebel == 1.5) {
+        document.getElementById('menge-zwiebel').innerHTML = "<span style='font-size: 18px;'>1½</span> Zwiebel(n)";
+    } else if (mengeZwiebel == 1.75) {
+        document.getElementById('menge-zwiebel').innerHTML = "<span style='font-size: 18px;'>1¾</span> Zwiebel(n)";
+    } else {
+        document.getElementById('menge-zwiebel').innerHTML = mengeZwiebel + " Zwiebel(n)";
     }
-
-    if (ganze === 0 && bruch !== "") return bruch;
-    if (bruch !== "") return `${ganze} ${bruch}`;
-    return zahl % 1 === 0 ? ganze : zahl.toFixed(1); // Fallback
 }
-
-
-
-document.addEventListener("DOMContentLoaded", function () {
-    const portionInput = document.getElementById("portionen");
-    const portionButton = document.querySelector(".portionen_button");
-    const zutaten = document.querySelectorAll(".td-left");
-
-    const originalMengen = [];
-
-    // Ursprüngliche Mengen speichern
-    zutaten.forEach((zutat) => {
-        const base = zutat.getAttribute("data-base");
-        if (base) {
-            originalMengen.push({
-                element: zutat,
-            base: parseFloat(base),
-            einheit: zutat.getAttribute("data-einheit") || "",
-            name: zutat.getAttribute("data-name") || ""
-            });
-        }
-    });
-
-    portionButton.addEventListener("click", function () {
-        const portionen = parseFloat(portionInput.value);
-        if (!portionen || portionen < 1 || portionen > 8) {
-            alert("Bitte gib eine Anzahl zwischen 1 und 8 Portionen ein.");
-            return;
-        }
-        
-
-        originalMengen.forEach((item) => {
-            let berechnet = item.base * portionen;
-            let neueMenge = dezimalZuBruch(berechnet);
-            item.element.textContent = `${neueMenge}${item.einheit} ${item.name}`.trim();
-        });
-    });
-    portionButton.click();
-});

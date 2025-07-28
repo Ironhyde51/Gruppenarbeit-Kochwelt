@@ -19,7 +19,7 @@
             <a class="navlink" href="index.html">Start</a>
             <a class="navlink" href="rezept-des-tages.html">Rezept des Tages</a>
             <a class="navlink" href="kontaktformular.html">Kontakte</a>
-            <a class="navlink" href="/Impressum.html">Impressum</a>
+            <a class="navlink" href="Impressum.html">Impressum</a>
         </nav>
         <div class="burger" id="burger">
             <span></span>
@@ -27,17 +27,17 @@
             <span></span>
         </div>
     </header>
-    <div class="mainbody">
+    <main class="mainbody page-wrapper">
         <h1 class="rezept_topic"> Spaghetti mit Garnelen in Sahnesauce</h1>
-        <img class="rezept_Img" src="/img/SpaghettiGarnelen.jpg" alt="Spaghetti mit Garnelen">
+        <img class="rezept_Img" src="./img/SpaghettiGarnelen.jpg" alt="Spaghetti mit Garnelen">
 
         <small class="rezept_icons">
             <span class="icon_backgr">
-                <img class="icons" src="/img/icons/clock-regular.svg" alt="Dauer">
+                <img class="icons" src="./img/icons/clock-regular.svg" alt="Dauer">
                 20 Min.
             </span>
             <span class="icon_backgr">
-                <img class="icons" src="/img/icons/brain-solid.svg" alt="Schwierigkeitsgrad">
+                <img class="icons" src="./img/icons/brain-solid.svg" alt="Schwierigkeitsgrad">
                 Simpel
             </span>
             <span class="icon_backgr_date">
@@ -53,38 +53,35 @@
 
         <section class="portionen_wrapper">
             <label for="portionen"> Zutaten für </label>
-            <input class="input_portionen" id="portionen" type="number" min="1" max="8" value="4"><input
-                class="portionen_button" type="submit" value="Portionen">
+            <input class="input_portionen" id="portionen" type="number" min="1" max="8" value="1"><button
+                class="portionen_button" onclick="rechneMenge()">Portionen</button>
         </section>
         <br>
         <br>
         <table class="ingredients">
             <tr>
-                <td class="td-left" data-base="150" data-einheit="g" data-name="Spaghetti">150g Spaghetti </td>
+                <td class="td-left" id="menge-spaghetti" >150g Spaghetti </td>
+
+            </tr>
+        
+            <tr>
+                <td class="td-left" id="menge-garnelen" >125g Garnelen</td>
 
             </tr>
             <tr>
-                <td class="td-left">Salzwasser</td>
+                <td class="td-left" id="menge-sahne">50ml Becher Sahne</td>
 
             </tr>
             <tr>
-                <td class="td-left" data-base="125" data-einheit="g" data-name="Garnelen">125g Garnelen</td>
+                <td class="td-left" id="menge-tomaten">50ml passierte Tomaten</td>
 
             </tr>
             <tr>
-                <td class="td-left" data-base="0.2" data-einheit=" Becher" data-name="Sahne">1/5 Becher Sahne</td>
+                <td class="td-left" id="menge-knoblauch" >1 Knoblauchzehe(n)</td>
 
             </tr>
             <tr>
-                <td class="td-left" data-base="0.5" data-name="Tomate(n)">1/2 Tomate(n)</td>
-
-            </tr>
-            <tr>
-                <td class="td-left" data-base="1" data-name="Knoblauchzehe(n)">1 Knoblauchzehe(n)</td>
-
-            </tr>
-            <tr>
-                <td class="td-left" data-base="0.25" data-name="Zwiebel(n)">1/4 Zwiebel(n)</td>
+                <td class="td-left" id="menge-zwiebel"><span style='font-size: 18px;'>¼</span> Zwiebel(n)</td>
 
             </tr>
             <tr>
@@ -95,21 +92,25 @@
                 <td class="td-left">etwas Basilikum</td>
 
             </tr>
+            <tr>
+                <td class="td-left" id="menge-salzwasser"> Topf Salzwasser für die Spaghetti Nudeln </td>
+
+            </tr>
         </table>
         <br>
         <section>
             <h2 class="rezept_topic">Zubereitung</h2>
             <small class="icons_zubereitung">
                 <span class="icon_backgr span_icon">
-                    <img class="icons" src="/img/icons/clock-regular.svg" alt="Kleine Uhr">
+                    <img class="icons" src="./img/icons/clock-regular.svg" alt="Kleine Uhr">
                     Arbeitszeit ca. 20 Min.
                 </span>
                 <span class="icon_backgr span_icon">
-                    <img class="icons" src="/img/icons/clock-regular.svg" alt="Kleine Uhr">
+                    <img class="icons" src="./img/icons/clock-regular.svg" alt="Kleine Uhr">
                     Koch-/Backzeit ca. 20 Min.
                 </span>
                 <span class="icon_backgr span_icon">
-                    <img class="icons" src="/img/icons/clock-regular.svg" alt="Kleine Uhr">
+                    <img class="icons" src="./img/icons/clock-regular.svg" alt="Kleine Uhr">
                     Gesamtzeit ca. 40 Min.
                 </span>
             </small>
@@ -127,10 +128,10 @@
 
         <h3 class="rezept_topic">Rezept erstellt von</h3>
         <section class="last_section">
-            <img class="profile_img" src="/img/profile.png" alt="Profilfoto">
+            <img class="profile_img" src="./img/profile.png" alt="Profilfoto">
             <span>Ellen Santos </span>
         </section>
-    </div>
+    </main>
     <footer id="footer">
         <div class="footer-content">
             <div class="footer-left">

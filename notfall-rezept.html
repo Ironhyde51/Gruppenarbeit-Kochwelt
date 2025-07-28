@@ -31,17 +31,17 @@
             <span></span>
         </div>
     </header>
-    <div class="mainbody">
+    <main class="mainbody page-wrapper">
         <h1>Türkische Pide mit Käse und Sucuk</h1>
-        <img class="rezept_Img" src="./img/türkische-pide.jpg" alt="Pide">
+        <img class="rezept_Img" src="./img/pidesucuk.jpg" alt="Pide">
 
         <small class="rezept_icons">
             <span class="icon_backgr">
-                <img class="icons" src="/img/icons/clock-regular.svg" alt="Dauer">
+                <img class="icons" src="./img/icons/clock-regular.svg" alt="Dauer">
                 120 Min.
             </span>
             <span class="icon_backgr">
-                <img class="icons" src="/img/icons/brain-solid.svg" alt="Schwierigkeitsgrad">
+                <img class="icons" src="./img/icons/brain-solid.svg" alt="Schwierigkeitsgrad">
                 Normal
             </span>
             <span class="icon_backgr_date">
@@ -57,44 +57,44 @@
 
         <section class="portionen_wrapper">
             <label for="portionen"> Zutaten für </label>
-            <input class="input_portionen" id="portionen" type="number" min="1" max="8" value="4"><input
-                class="portionen_button" type="submit" value="Portionen">
+            <input class="input_portionen" id="portionen" type="number" min="1" max="8" value="1"><button
+                class="portionen_button" onclick="rechneMenge()">Portionen</button>
         </section>
         <br>
         <br>
 <table class="ingredients">
   <tr>
-    <td class="td-left" data-base="150" data-einheit=" g" data-name="Mehl">150 g Mehl</td>
+    <td class="td-left" id="p-Mehl" >150 g Mehl</td>
   </tr>
   <tr>
-    <td class="td-left" data-base="0.25" data-einheit=" Pck." data-name="Trockenhefe oder 1/2 Pck. Frischhefe">¼ Pck. Trockenhefe oder 1/2 Pck. Frischhefe</td>
+    <td class="td-left" id="p-Trockenhefe" >¼ Pck. Trockenhefe</td>
   </tr>
   <tr>
-    <td class="td-left" data-base="62.5" data-einheit=" ml" data-name="Wasser, lauwarm">62 ½ ml Wasser, lauwarm</td>
+    <td class="td-left" id="p-Wasser" >62 ½ ml Wasser, lauwarm</td>
   </tr>
   <tr>
-    <td class="td-left" data-base="1" data-einheit=" EL" data-name="Joghurt">1 EL Joghurt</td>
+    <td class="td-left" id="p-Joghurt" >1 EL Joghurt</td>
   </tr>
   <tr>
-    <td class="td-left" data-base="1" data-einheit=" EL" data-name="Olivenöl">1 EL Olivenöl</td>
+    <td class="td-left" id="p-Olivenöl" >1 EL Olivenöl</td>
   </tr>
   <tr>
-    <td class="td-left" data-base="0.38" data-einheit=" TL" data-name="Salz">0,38 TL Salz</td>
+    <td class="td-left" id="p-Salz" ><span style='font-size: 18px;'>⅖</span> TL Salz</td>
   </tr>
   <tr>
-    <td class="td-left" data-base="0.25" data-einheit=" TL" data-name="Zucker">¼ TL Zucker</td>
+    <td class="td-left" id="p-Zucker" >¼ TL Zucker</td>
   </tr>
   <tr>
-    <td class="td-left" data-base="100" data-einheit=" g" data-name="Käse (Kasar), gerieben">100 g Käse (Kasar), gerieben</td>
+    <td class="td-left" id="p-Käse" >100 g Käse (Kasar), gerieben</td>
   </tr>
   <tr>
-    <td class="td-left" data-base="5" data-einheit=" Scheibe(n)" data-name="Sucuk">5 Scheibe(n) Sucuk</td>
+    <td class="td-left" id="p-Sucuk" >5 Scheibe(n) Sucuk</td>
   </tr>
   <tr>
-    <td class="td-left" data-base="0.25" data-einheit="" data-name="Ei(er) zum Einstreichen">¼ Ei(er) zum Einstreichen</td>
+    <td class="td-left" id="p-Eier" >¼ Ei(er) zum Einstreichen</td>
   </tr>
   <tr>
-    <td class="td-left">Mehl für die Arbeitsfläche</td>
+    <td class="td-left" >Mehl für die Arbeitsfläche</td>
   </tr>
 </table>
 
@@ -104,15 +104,15 @@
             <h2>Zubereitung</h2>
             <small class="icons_zubereitung">
                 <span class="icon_backgr span_icon">
-                    <img class="icons" src="/img/icons/clock-regular.svg" alt="Kleine Uhr">
+                    <img class="icons" src="./img/icons/clock-regular.svg" alt="Kleine Uhr">
                     Arbeitszeit ca. 40 Min.
                 </span>
                 <span class="icon_backgr span_icon">
-                    <img class="icons" src="/img/icons/clock-regular.svg" alt="Kleine Uhr">
+                    <img class="icons" src="./img/icons/clock-regular.svg" alt="Kleine Uhr">
                     Koch-/Backzeit ca. 20 Min.
                 </span>
                 <span class="icon_backgr span_icon">
-                    <img class="icons" src="/img/icons/clock-regular.svg" alt="Kleine Uhr">
+                    <img class="icons" src="./img/icons/clock-regular.svg" alt="Kleine Uhr">
                     Gesamtzeit ca. 120 Min.
                 </span>
             </small>
@@ -160,10 +160,10 @@
 
         <h3>Rezept erstellt von</h3>
         <section class="last_section">
-            <img class="profile_img" src="/img/profile.png" alt="Profilfoto">
+            <img class="profile_img" src="./img/profile.png" alt="Profilfoto">
             <span>Mücahit Ö.</span>
         </section>
-    </div>
+    </main>
     <footer id="footer">
         <div class="footer-content">
             <div class="footer-left">
@@ -194,7 +194,7 @@
     </footer>
 
 
-    <script src="javascript.js"></script>
+    <script src="nofall-rezept.js"></script>
 </body>
 
 </html>
