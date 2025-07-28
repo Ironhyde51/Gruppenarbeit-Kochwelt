@@ -59,31 +59,31 @@
 
 <section class="portionen_wrapper">
             <label for="portionen"> Zutaten für </label>
-            <input class="input_portionen" id="portionen" type="number" min="1" max="8" value="4"><input
-                class="portionen_button" type="submit" value="Portionen">
+            <input class="input_portionen" id="portionen" type="number" min="1" max="8" value="1">
+            <button class="portionen_button" onclick="rechneMenge()">Portionen</button>
         </section>
         <br>
         <br>
         <table class="ingredients">
              <tr>
-                <td class="td-left" data-base="1" data-name="Schweineschnitzel">1 Schweineschnitzel</td>
+                <td class="td-left" id="schnitzel">1 Schweineschnitzel</td>
             </tr>
 
             <tr>
-                <td class="td-left" data-base="0.5" data-name="Paprikaschote(n), Farbe nach Wahl">½ Paprikaschote(n), Farbe nach Wahl</td>
+                <td class="td-left" id="paprika"><span style='font-size: 18px;'>½</span> Paprikaschote(n), Farbe nach Wahl</td>
             </tr>
 
             <tr>
-                <td class="td-left" data-base="0.25" data-name="Zwiebel">¼ große Zwiebel(n)</td>
+                <td class="td-left" id="zwiebel"><span style='font-size: 18px;'>¼</span> große Zwiebel(n)</td>
             </tr>
 
 
             <tr>
-                <td class="td-left" data-base="100" data-einheit="ml" data-name="Kokosmilch">100 ml Kokosmilch</td>
+                <td class="td-left" id="cocos">100 ml Kokosmilch</td>
             </tr>
 
              <tr>
-                <td class="td-left" data-base="0.75" data-name="Paprikaschote(n), Farbe nach Wahl">¾ Banane(n), Farbe nach Wahl</td>
+                <td class="td-left" id="banana"><span style='font-size: 18px;'>¾</span> Banane(n)</td>
             </tr>
 
             <tr>
@@ -163,7 +163,7 @@
     </footer>
 
 
-    <script src="javascript.js"></script>
+    <script src="javascript-bananen-curry.js"></script>
 </body>
 
 </html>
