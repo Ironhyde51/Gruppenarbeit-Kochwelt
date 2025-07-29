@@ -338,7 +338,7 @@ footer {
 /* Kontaktformular */
 .kontakt-section {
   background-color: #e6e5e5;
-  padding: 80px 20px;
+  padding: 200px 20px;
   margin-top: 80px;
   display: flex;
   justify-content: center;
@@ -584,7 +584,7 @@ ul {
 
   nav {
     width: auto;
-    padding: 0 10px 10px 10px;
+    padding: 0;
   }
 
   .highlight-recipe {
@@ -646,8 +646,7 @@ ul {
 
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-around;
   }
 
   header img {
@@ -705,6 +704,7 @@ ul {
   }
   .burger{
     margin-right: 0px;
+    padding: 30px 0px;
   }
 }
 
@@ -749,7 +749,23 @@ ul {
   ul {
     padding: 10px;
   }
+  h1 {
+    font-size: 20px;
+  }
+  h2{
+    font-size: 18px !important;
+  }
+  h3{
+    font-size: 16px;
+  }
+  p, span, table {
+    font-size: 14px;
+  }
+  .last_section span {
+    font-size: 16px !important;
+  }
 }
+
 
 @media (max-width: 320px) {
   .navlink {
@@ -787,7 +803,7 @@ ul {
 }
 
 .mainbody {
-  padding: 150px 150px 100px 150px;
+  padding: 150px 150px 0px 150px;
 }
 
 .rezept_topic {
@@ -930,9 +946,7 @@ small {
 }
 
 @media (max-width: 1020px) {
-  .mainbody {
-    padding: 200px 100px 0 100px;
-  }
+  
 
   .span_icon {
     width: 200px;
@@ -1004,7 +1018,7 @@ small {
   }
 
   .impressum {
-    padding: 200px 50px 0 50px !important;
+    padding: 150px 50px 0 50px !important;
   }
 
   .datenschutz {

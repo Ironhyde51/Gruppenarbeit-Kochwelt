@@ -418,7 +418,7 @@ footer {
 
   nav {
     width: auto;
-    padding: 0 10px 10px 10px;
+    padding: 0;
   }
 
   .highlight-recipe {
@@ -466,8 +466,7 @@ footer {
 
 @media (max-width: 768px) {
   header {
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-around;
   }
 
   header img {
@@ -506,6 +505,11 @@ footer {
   .article-section {
     padding: 40px 10px;
   }
+  .burger{
+    margin-right: 0px;
+    padding: 30px 0px;
+
+  }
 }
 
 @media (max-width: 480px) {
@@ -526,6 +530,22 @@ footer {
   .footer-socials {
     flex-direction: column;
     gap: 8px;
+  }
+  h1 {
+    font-size: 20px;
+    margin-top: 150px !important;
+  }
+  h2{
+    font-size: 18px;
+  }
+  h3{
+    font-size: 16px;
+  }
+  p, span, table {
+    font-size: 14px;
+  }
+  .last_section span {
+    font-size: 16px !important;
   }
 }
 
