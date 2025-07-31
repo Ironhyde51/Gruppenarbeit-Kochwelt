@@ -66,7 +66,7 @@ nav {
 }
 main{
   flex: 1;
-  min-height: 100vh;
+  min-height: 82vh;
 }
 @media (min-width: 1400px){
 .page-wrapper{
@@ -336,8 +336,9 @@ footer {
 }
 
 /* Kontaktformular */
+
 .kontakt-section {
-  background-color: #e6e5e5;
+  background-color: #e6e5e5; 
   padding: 200px 20px;
   margin-top: 80px;
   display: flex;
@@ -351,6 +352,7 @@ footer {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 100%;
   max-width: 500px;
+   overflow: auto;
 }
 
 .kontaktformular h2 {
@@ -401,6 +403,27 @@ footer {
 
 .kontaktformular button:hover {
   background-color: #006600;
+}
+.kontakt-page {
+  background-color: #e6e5e5;
+  min-height: 100vh;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.page-wrapper1 {
+  flex: 1; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  overflow: hidden;
+     max-height: calc(90vh - 200px);
 }
 
 /* wok vs pfanne- info seite*/
