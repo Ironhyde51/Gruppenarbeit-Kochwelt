@@ -598,7 +598,7 @@ h3 {
 .rezept_icons {
     display: flex;
     width: 300px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .icon_backgr {
@@ -767,7 +767,6 @@ small {
 
     .rezept_icons {
         width: auto;
-        flex-direction: column;
         align-items: center;
     }
 }
@@ -776,7 +775,7 @@ small {
 
     .portionen_wrapper {
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
         align-items: center;
     }
 
