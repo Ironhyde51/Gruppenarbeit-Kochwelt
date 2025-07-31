@@ -5,7 +5,7 @@ burger.addEventListener('click', () => {
   burger.classList.toggle('active');
   nav.classList.toggle('show');
 });
-// Basisdaten als Objekt
+// Basedata as Object
 let components = {
     cutlet: 1,  
     pepper: 0.5,
@@ -15,10 +15,10 @@ let components = {
     };
 
 function rechneMenge() {
-    // portions aus Input lesen
+    // portions Input 
     let portions = document.getElementById('portions').value;
 
-    // Prüfen, ob portions gültig sind
+    // check portions 
     if (portions < 1) {
         portions = 1;
     } else if (portions > 8) {
@@ -26,14 +26,14 @@ function rechneMenge() {
         alert("Bitte gebe einen Wert zwischen 1 und 8 ein.");
     }
 
-    // Menge berechnen
+    // calc ingredieants 
     let amountCutlet = components.cutlet * portions;
     let amountPepper = components.pepper * portions;
     let amountOnion = components.onion * portions; 
     let amountCocos = components.cocos * portions;
     let amountBanana = components.banana * portions;
    
-    // Ergebnis anzeigen
+    // show the result
     document.getElementById('cutlet').innerHTML = amountCutlet + " Schweineschnitzel";
     document.getElementById('pepper').innerHTML = amountPepper + " Paprikaschote(n), Farbe nach Wahl";
     document.getElementById('onion').innerHTML = amountOnion + " große Zwiebel(n)";

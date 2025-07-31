@@ -69,8 +69,8 @@ main{
 }
 @media (min-width: 1400px){
 .page-wrapper{
-  max-width: 1200px; /* oder z. B. 960px */
-  margin: 0 auto;     /* zentriert horizontal */
+  max-width: 1200px; /* example 960px */
+  margin: 0 auto;     /* center horizontl */
   
   width: 100%;
 }
@@ -329,7 +329,7 @@ footer {
   transition: all 0.3s ease;
 }
 
-/* Burger nur sichtbar ab 1024px runter */
+/* show Burger on 1024px and under */
 @media (max-width: 1024px) {
   nav {
     position: absolute;
@@ -346,7 +346,7 @@ footer {
 
   nav.show {
     max-height: 300px;
-    /* anpassen je nach Links */
+    /* Adapt depending on the Links */
   }
 
   .burger {
@@ -634,6 +634,7 @@ h3 {
     vertical-align: none;
     margin: 0;
     margin-left: 12px;
+    
 }
 
 .portionen_button {

@@ -5,9 +5,9 @@ burger.addEventListener('click', () => {
   burger.classList.toggle('active');
   nav.classList.toggle('show');
 });
-// Basisdaten als Objekt
+// Basedata as Object
 let zutaten = {
-    spaghetti: 150,  // Gramm für 1 Portion
+    spaghetti: 150,  // grams for 1 serving
     garnelen: 125,
     Sahne: 50,
     Tomaten: 50,
@@ -16,10 +16,10 @@ let zutaten = {
 };
 
 function rechneMenge() {
-    // Portionen aus Input lesen
+    // portions Input 
     let portionen = document.getElementById('portionen').value;
 
-    // Prüfen, ob Portionen gültig sind
+    // check portions
     if (portionen < 1) {
         portionen = 1;
     } else if (portionen > 8) {
@@ -27,7 +27,7 @@ function rechneMenge() {
         alert("Bitte gebe einen Wert zwischen 1 und 8 ein.");
     }
 
-    // Menge berechnen
+    // calc ingredieants
     let mengeSpaghetti = zutaten.spaghetti * portionen;
     let mengeGarnelen = zutaten.garnelen * portionen;
     let mengeSahne = zutaten.Sahne * portionen;
@@ -35,7 +35,7 @@ function rechneMenge() {
     let mengeZwiebel = zutaten.Zwiebel * portionen;
     let mengeKnoblauch = zutaten.Knoblauch * portionen;
 
-    // Ergebnis anzeigen
+    // show result
     document.getElementById('menge-spaghetti').innerHTML = mengeSpaghetti + "g Spaghetti";
     document.getElementById('menge-garnelen').innerHTML = mengeGarnelen + "g Garnelen";
     document.getElementById('menge-sahne').innerHTML = mengeSahne + "ml Sahne";
