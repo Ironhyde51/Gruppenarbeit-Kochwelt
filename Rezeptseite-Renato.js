@@ -6,88 +6,44 @@ burger.addEventListener('click', () => {
     nav.classList.toggle('show');
 });
 
-// Basisdaten pro Portion
+//  Base data per portion — all values in g, ml, or cl
 const zutaten = {
-    rrSchweineschnitzel: 1,
-    rrKnoblauch: 3 / 4,
-    rrZwiebeln: 1 / 2,
-    rrZitronensaft: 1 / 2,
-    rrMajoran: 3 / 4,
-    rrThymian: 1 / 2,
-    rrPaprikapulver: 3 / 4,
-    rrKreuzkümmel: 1 / 4,
-    rrOlivenöl: 1.5
+    rrSchweineschnitzel: 150,       // g
+    rrKnoblauch: 4,                 // g (1 Zehe ≈ 4g)
+    rrZwiebeln: 50,                 // g (½ Zwiebel ≈ 50g)
+    rrZitronensaft: 7,              // ml (½ EL ≈ 7ml)
+    rrMajoran: 0.8,                 // g (¾ TL ≈ 0.8g)
+    rrThymian: 0.5,                 // g (½ TL ≈ 0.5g)
+    rrPaprikapulver: 1.5,           // g (¾ TL ≈ 1.5g)
+    rrKreuzkümmel: 0.5,             // g (¼ TL ≈ 0.5g)
+    rrOlivenöl: 1.5                 // cl
 };
 
-// Funktion zur Bruchdarstellung
-function setBruchText(id, menge, einheit) {
-    let bruchTexte = {
-        0.25: "¼",
-        0.5: "½",
-        0.75: "¾",
-        1.25: "1¼",
-        1.5: "1½",
-        1.75: "1¾",
-        2.25: "2¼",
-        2.5: "2½",
-        2.75: "2¾",
-        3.25: "3¼",
-        3.5: "3½",
-        3.75: "3¾",
-        4.5: "4½",
-        5.25: "5¼"
-    };
-
-    let element = document.getElementById(id);
-
-    // Vergleicht gerundete Zahl mit Bruchschlüssel
-    if (bruchTexte[menge]) {
-        element.innerHTML = "<span style='font-size: 18px;'>" + bruchTexte[menge] + "</span> " + einheit;
-    }
+// Helper function to display values
+function zeigeZutat(id, menge, einheit) {
+    const wert = menge.toFixed(1).replace('.', ',');
+    document.getElementById(id).innerHTML = `${wert} ${einheit}`;
 }
 
-// Hauptfunktion zur Berechnung der Mengen
+// Main function to calculate based on servings
 function rechneMenge() {
-    let portionen = (document.getElementById('portionen').value);
+    let portionen = parseInt(document.getElementById('portionen').value);
 
-    // Eingabekontrolle
     if (portionen < 1) {
         portionen = 1;
-        alert("Bitte gib einen Wert zwischen 1 und 8 ein.")
+        alert("Bitte gib einen Wert zwischen 1 und 8 ein.");
     } else if (portionen > 8) {
         portionen = 8;
         alert("Bitte gib einen Wert zwischen 1 und 8 ein.");
     }
 
-    // Mengen berechnen und auf 2 Nachkommastellen runden
-    let rrmengeSchweineschnitzel = zutaten.rrSchweineschnitzel * portionen;
-    let rrmengeKnoblauch = +(zutaten.rrKnoblauch * portionen).toFixed(2);
-    let rrmengeZwiebeln = +(zutaten.rrZwiebeln * portionen).toFixed(2);
-    let rrmengeZitronensaft = +(zutaten.rrZitronensaft * portionen).toFixed(2);
-    let rrmengeMajoran = +(zutaten.rrMajoran * portionen).toFixed(2);
-    let rrmengeThymian = +(zutaten.rrThymian * portionen).toFixed(2);
-    let rrmengePaprikapulver = +(zutaten.rrPaprikapulver * portionen).toFixed(2);
-    let rrmengeKreuzkümmel = +(zutaten.rrKreuzkümmel * portionen).toFixed(2);
-    let rrmengeOlivenöl = (zutaten.rrOlivenöl * portionen).toFixed(1);
-
-    // Standardanzeige (wird ggf. durch Bruch ersetzt)
-    document.getElementById('rr-Schweineschnitzel').innerHTML = rrmengeSchweineschnitzel + " Schweineschnitzel";
-    document.getElementById('rr-Knoblauch').innerHTML = rrmengeKnoblauch + " Knoblauchzehe(n)";
-    document.getElementById('rr-Zwiebeln').innerHTML = rrmengeZwiebeln + " Zwiebel(n)";
-    document.getElementById('rr-Zitronensaft').innerHTML = rrmengeZitronensaft + " EL Zitronensaft";
-    document.getElementById('rr-Majoran').innerHTML = rrmengeMajoran + " TL Majoran";
-    document.getElementById('rr-Thymian').innerHTML = rrmengeThymian + " TL Thymian";
-    document.getElementById('rr-Paprikapulver').innerHTML = rrmengePaprikapulver + " TL Paprikapulver, edelsüß";
-    document.getElementById('rr-Kreuzkümmel').innerHTML = rrmengeKreuzkümmel + " TL Kreuzkümmel";
-    document.getElementById('rr-Olivenöl').innerHTML = rrmengeOlivenöl + " cl Olivenöl";
-
-    // Brüche darstellen (falls vorhanden)
-    setBruchText("rr-Knoblauch", rrmengeKnoblauch, "Knoblauchzehe(n)");
-    setBruchText("rr-Zwiebeln", rrmengeZwiebeln, "Zwiebel(n)");
-    setBruchText("rr-Zitronensaft", rrmengeZitronensaft, "EL Zitronensaft");
-    setBruchText("rr-Majoran", rrmengeMajoran, "TL Majoran");
-    setBruchText("rr-Thymian", rrmengeThymian, "TL Thymian");
-    setBruchText("rr-Paprikapulver", rrmengePaprikapulver, "TL Paprikapulver, edelsüß");
-    setBruchText("rr-Kreuzkümmel", rrmengeKreuzkümmel, "TL Kreuzkümmel");
+    zeigeZutat('rr-Schweineschnitzel', zutaten.rrSchweineschnitzel * portionen, "g Schweineschnitzel");
+    zeigeZutat('rr-Knoblauch', zutaten.rrKnoblauch * portionen, "g Knoblauch");
+    zeigeZutat('rr-Zwiebeln', zutaten.rrZwiebeln * portionen, "g Zwiebel");
+    zeigeZutat('rr-Zitronensaft', zutaten.rrZitronensaft * portionen, "ml Zitronensaft");
+    zeigeZutat('rr-Majoran', zutaten.rrMajoran * portionen, "g Majoran");
+    zeigeZutat('rr-Thymian', zutaten.rrThymian * portionen, "g Thymian");
+    zeigeZutat('rr-Paprikapulver', zutaten.rrPaprikapulver * portionen, "g Paprikapulver");
+    zeigeZutat('rr-Kreuzkümmel', zutaten.rrKreuzkümmel * portionen, "g Kreuzkümmel");
+    zeigeZutat('rr-Olivenöl', zutaten.rrOlivenöl * portionen, "cl Olivenöl");
 }
-
