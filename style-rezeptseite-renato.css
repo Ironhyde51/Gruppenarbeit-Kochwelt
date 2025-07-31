@@ -737,9 +737,9 @@ small {
         align-items: center;
     }
 
-    .icon_backgr {
+    /* .icon_backgr {
         margin-bottom: 8px;
-    }
+    } */
 
     p {
         text-align: center;

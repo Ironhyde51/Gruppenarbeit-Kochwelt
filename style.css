@@ -1012,7 +1012,7 @@ small {
 
   .rezept_icons {
     width: auto;
-    align-items: center;
+    /* align-items: center; */
   }
 }
 
